@@ -93,9 +93,11 @@ void main(){
     }
     projPosition = projectionMatrix * viewMatrix * modelSpacePos;
     if(g_LightPosition.w == -1.0){
+    /*
         diffuseLight += g_LightColor.rgb * CalcDirLight(g_LightPosition.xyz, modelNormal, cameraDirection);
+        WARNING : TEMPORARY FIX
+    */
     }
-    
     colorToMix = texCoord2.x;
     minX = texCoord3.x;
     texSize = texCoord3.y;
